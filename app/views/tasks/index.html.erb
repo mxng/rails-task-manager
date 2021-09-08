@@ -2,8 +2,8 @@
 
 <% @tasks.each do |task| %>
   <div class="task">
-    <input type="checkbox" name="completed" id="completed">
-    <h3><%= task.title %></h3>
+    <input type="checkbox" name="completed" id="completed" <%= "checked" if task.completed %>>
+    <h3><%= link_to task.title, task_path(task) %></h3>
     <p><%= task.details %></p>
   </div>
 <% end %>
