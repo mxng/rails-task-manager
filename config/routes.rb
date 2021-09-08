@@ -12,6 +12,6 @@ Rails.application.routes.draw do
 
   # # delete
   # delete 'tasks/:id', to: 'tasks#destroy'
-
+  root to: 'tasks#home'
   resources :tasks
 end
