@@ -2,6 +2,10 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :details %>
-  <%= f.text_field :details %>
+  <%= f.text_field :details %><br><br>
+  <% unless @task.new_record? %>
+    <%= f.check_box :completed %> Completed
+  <% end %>
+  <br><br>
   <%= f.submit %>
 <% end %>
